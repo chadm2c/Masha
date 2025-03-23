@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маша</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2c7ec895d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Balloons Animation 1 -->
+        <div id="balloon-container"></div>
+
+        <!-- Floating Balloons Animation 2 -->
+        <div id="balloon-container-2"></div>
+
+        <!-- Confetti and Typewriter Animation -->
+        <div class="birthday-message">с днем ​​рождения Маша!🎂🎉❤️</div>
+        <div id="confetti-container"></div>
+
+        <div class="content">
+            <div class="intro">
+                <span>
+                    <p>(какашка 😆😆😆)</p>
+                </span>
+            </div>
+        </div>
+        <div class="imgProfile">
+            <img src="./photo (24).jpg" alt="">
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (32).mp4"></video>
+            <p>😆😆😆</p>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (6).mp4"></video>
+            <p> "...спасибо ей что она дает мне уверенность в себе и подает классный пример"</p>
+            <p>"...я очень рада что именно она жила напротив меня,сейчас вспоминая
+                 те года всегда очень тепло на душе и эта теплота в том числе от машки"❤️</p>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (3).mp4"></video>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (4).mp4"></video>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (5).mp4"></video>
+        </div>
+
+        <div class="text87">
+            <video controls loop src="video/vid (7).mp4"></video>
+            <p> ...я рада что жизнь меня с ней свела</p> <br>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (11).mp4"></video>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (8).mp4"></video>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (9).mp4"></video>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (1).mp4"></video>
+        </div>
+        <div class="text87">
+            <video controls loop src="video/vid (10).mp4"></video>
+        </div>
+        <div class="imgProfile">
+            <img src="./photo6.jpg" alt="">
+            <p>"...я рада что у меня в окружении есть такой друг которому я могу доверится
+                 и которого я по-настоящему люблю и дорожу им боже Маша спасибо её маме что она есть на этом белом свете"</p> <br>
+            <p>...машка спасибо что делаешь мою жизнь лучше и вытаскиваешь меня из дэпрессии ради тебя 
+            я хуй сосать буду никакой философии просто люблю этого человека как никого другого</p> <br>
+            <h2>❤️Это от твоих друзей, мы так сильно тебя любим ❤️</h2><br>
+            <h3>с днем ​​рождения Маша!🎂🎉</h3><br>
+        </div>
+    </div>
+
+    <script>
+        // Floating Balloons Animation 1
+        const balloonContainer = document.getElementById('balloon-container');
+        const balloonColors = ['#ff6f61', '#6b5b95', '#88b04b', '#f7cac9', '#92a8d1'];
+
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = `${Math.random() * 100}%`;
+            balloon.style.backgroundColor = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+            balloon.style.animationDuration = `${Math.random() * 4 + 3}s`;
+            balloonContainer.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.remove();
+            }, 10000);
+        }
+
+        setInterval(createBalloon, 1000);
+
+        // Floating Balloons Animation 2
+        const balloonContainer2 = document.getElementById('balloon-container-2');
+        const balloonColors2 = ['#ffcc00', '#ff6666', '#66ccff', '#99ff99', '#cc99ff'];
+
+        function createBalloon2() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon-2';
+            balloon.style.left = `${Math.random() * 100}%`;
+            balloon.style.backgroundColor = balloonColors2[Math.floor(Math.random() * balloonColors2.length)];
+            balloon.style.animationDuration = `${Math.random() * 4 + 3}s`;
+            balloonContainer2.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.remove();
+            }, 10000);
+        }
+
+        setInterval(createBalloon2, 1000);
+
+        // Confetti Animation
+        const confettiContainer = document.getElementById('confetti-container');
+        const confettiColors = ['#ff6f61', '#6b5b95', '#88b04b', '#f7cac9', '#92a8d1'];
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+            confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            confettiContainer.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+
+        setInterval(createConfetti, 100);
+    </script>
+</body>
+</html>
